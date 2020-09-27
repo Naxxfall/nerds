@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <title>Нёрдс | Магазин</title>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navigation main-wrapper">
+      <ul class="main-menu">
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="index.html">
+            <span class="visually-hidden">Перейти на главную страницу</span>
+            <img class="main-logo" src="" alt="Логотип дизайн-студии «Нёрдс»">
+          </a>
+        </li>
+      </ul>
+      <ul class="main-menu__list">
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="">Студия</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="">Клиенты</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link">Магазин</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="">Контакты</a>
+        </li>
+      </ul>
+      <ul>
+        <li class="main-menu__item">
+          <a class="main-menu__link">Корзина</a>
+        </li>
+      </ul>  
+    </nav>
+  </header>
+  <main class="main-content">
+    <div class="main-caption">
+      <h1 class="main-header">Магазин готовых шаблонов</h1>
+    </div>
+    <div class="main-wrapper">
+      <div class="columns-container">
+        <form class="catalog-form" method="get">
+          <fieldset class="catalog-form__fieldset">
+            <legend class="catalog-form__legend">Стоимость:</legend>
+            <div class="catalog-form__slider"></div>
+          </fieldset>
+          <fieldset class="catalog-form__fieldset">
+            <legend class="catalog-form__legend">Сетка:</legend>
+            <ul class="catalog-form__list">
+              <li class="product-filter__item">
+                <label class="radiobutton">
+                  <input class="visually-hidden radiobutton__hidden" type="radio" name="grid" value="adaptive">
+                  <span class="radiobutton__indicator"></span>
+                  <span class="radiobutton__text">Адаптивная</span>
+                </label>
+              </li>
+              <li class="product-filter__item">
+                <label class="radiobutton">
+                  <input class="visually-hidden radiobutton__hidden" type="radio" name="grid" value="fixed">
+                  <span class="radiobutton__indicator"></span>
+                  <span class="radiobutton__text">Фиксированная</span>
+                </label>
+              </li>
+              <li class="product-filter__item">
+                <label class="radiobutton">
+                  <input class="visually-hidden radiobutton__hidden" type="radio" name="grid" value="rubber">
+                  <span class="radiobutton__indicator"></span>
+                  <span class="radiobutton__text">Резиновая</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="catalog-form__fieldset">
+            <legend class="catalog-form__legend">Особенности:</legend>
+            <ul class="catalog-form__list">
+              <li class="catalog-form__item">
+                <label class="checkbox">
+                  <input class="visually-hidden checkbox__hidden" type="checkbox" name="slider">
+                  <span class="checkbox__indicator"></span>
+                  <span class="checkbox__text">Слайдер</span>
+                </label>
+              </li>
+              <li class="catalog-form__item">
+                <label class="checkbox">
+                  <input class="visually-hidden checkbox__hidden" type="checkbox" name="advantages">
+                  <span class="checkbox__indicator"></span>
+                  <span class="checkbox__text">Блок преимуществ</span>
+                </label>
+              </li>
+              <li class="catalog-form__item">
+                <label class="checkbox">
+                  <input class="visually-hidden checkbox__hidden" type="checkbox" name="news">
+                  <span class="checkbox__indicator"></span>
+                  <span class="checkbox__text">Новости</span>
+                </label>
+              </li>
+              <li class="catalog-form__item">
+                <label class="checkbox">
+                  <input class="visually-hidden checkbox__hidden" type="checkbox" name="gallery">
+                  <span class="checkbox__indicator"></span>
+                  <span class="checkbox__text">Галерея</span>
+                </label>
+              </li>
+              <li class="catalog-form__item">
+                <label class="checkbox">
+                  <input class="visually-hidden checkbox__hidden" type="checkbox" name="basket">
+                  <span class="checkbox__indicator"></span>
+                  <span class="checkbox__text">Корзина</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <input class="button catalog-form__button" type="submit" value="Показать">
+        </form>
+        <section class="catalog">
+          <div class="catalog__group-by">
+            <p class="catalog__caption">Сортировать:</p>
+            <div class="catalog__controls">
+              <button class="button catalog__button">По цене</button>
+              <button class="button catalog__button">По типу</button>
+              <button class="button catalog__button">По названию</button>
+              <button class="button catalog__button"><img src="" alt="По убыванию"></button>
+              <button class="button catalog__button"><img src="" alt="По возрастанию"></button>
+            </div>
+          </div>
+          <div class="catalog__wrapper">
+            <ul class="catalog__list">
+              <li class="catalog__item"></li>
+              <li class="catalog__item"></li>
+              <li class="catalog__item"></li>
+              <li class="catalog__item"></li>
+              <li class="catalog__item"></li>
+              <li class="catalog__item"></li>
+            </ul>
+          </div>
+          <div class="pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <button class="button form-button pagination-button">1</button>
+              </li>
+              <li class="pagination__item">
+                <button class="button form-button pagination-button">2</button>
+              </li>
+              <li class="pagination__item">
+                <button class="button form-button pagination-button">3</button>
+              </li>
+              <li class="pagination__item">
+                <button class="button form-button">Следующая</button>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="main-footer">
+    <div class="map"></div>
+    <div class="main-wrapper">
+      <h2 class="visually-hidden">Контактная информация</h2>
+      <div class="contacts">
+        <h4 class="contacts__caption">Nёrds Design Studio</h4>
+        <p class="contacts__text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <p class="contacts__text">тел. +7 (812) 275-75-75</p>
+        <a class="button contacts__button" href="feedback.html">Напишите нам</a>
+      </div>
+      <div class="social-links">
+        <ul class="social-links__list">
+          <li class="social-links__item">
+            <a class="social-links__link">
+              <img class="social-links__icon" src="" alt="Наша группа Вконтакте">
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link">
+              <img class="social-links__icon" src="" alt="Наш профиль в Facebook">
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link">
+              <img class="social-links__icon" src="" alt="Наш профиль в Instagram">
+            </a>
+          </li>
+        </ul>
+        <p class="social-links__text"><strong class="social-links__lead">Давайте дружить, это выгодно!</strong><br>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
