@@ -37,30 +37,48 @@
     <h1 class="visually-hidden">Дизайн-студия «Нёрдс»</h1>
     <section class="slider">
       <h2 class="visually-hidden">Преимущества</h2>
-      <ul class="slider__list no-bullet">
-        <li class="slider__item main-wrapper">
-          <div class="slider__slide-1 slide-wrapper">
+      <div class="slider__wrapper main-wrapper">
+
+        <ul class="slider__list no-bullet">
+          <li class="slider__item ">
+            <div class="slider__slide-1 slide-wrapper slider__slide--show">
               <h3 class="slider__slide-name">Долго, дорого,<br>скрупулезно.</h3>
               <p class="slider__slide-text">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
               <a class="button slider__button" href="">Узнать больше</a>
-          </div>
-        </li>
-        <li class="slider__item main-wrapper">
-          <div class="slider__slide-2 slide-wrapper">
+            </div>
+          </li>
+          <li class="slider__item">
+            <div class="slider__slide-2 slide-wrapper">
               <h3 class="slider__slide-name">Любим математику<br>как никто другой</h3>
               <p class="slider__slide-text">Никакого креатива, только математические формулы<br>для расчета идеальных пропорций.</p>
               <a class="button slider__button" href="">Узнать больше</a>
-          </div>
-        </li>
-        <li class="slider__item main-wrapper">
-          <div class="slider__slide-3 slide-wrapper">
+            </div>
+          </li>
+          <li class="slider__item">
+            <div class="slider__slide-3 slide-wrapper">
               <h3 class="slider__slide-name">Только ночь,<br>только хардкор</h3>
               <p class="slider__slide-text">Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается.</p>
               <a class="button slider__button" href="">Узнать больше</a>
-
-          </div>
-        </li>
-      </ul>
+            </div>
+          </li>
+        </ul>
+        <div class="slider__controls main-wrapper">
+          <ul class="slider__controls-list no-bullet">
+            <li class="slider__controls-item">
+              <button class="slider__control"></button>
+              <div class="slider__control-indicator"></div>
+            </li>
+            <li class="slider__controls-item">
+              <button class="slider__control"></button>
+              <div class="slider__control-indicator"></div>
+            </li>
+            <li class="slider__controls-item">
+              <button class="slider__control"></button>
+              <div class="slider__control-indicator"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
     <div class="main-wrapper">
       <section class="services">
@@ -84,36 +102,6 @@
             <p class="services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
             <button class="button" type="button">Заказать</button>
           </li>
-          <li class="services__item">
-            <img class="services__image" src="img/illustration-presentations.png" width="300px" alt="">
-            <h3 class="services__caption">Презентации</h3>
-            <p class="services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
-            <button class="button" type="button">Заказать</button>
-          </li>
-          <li class="services__item">
-            <img class="services__image" src="img/illustration-presentations.png" width="300px" alt="">
-            <h3 class="services__caption">Презентации</h3>
-            <p class="services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
-            <button class="button" type="button">Заказать</button>
-          </li>
-          <li class="services__item">
-            <img class="services__image" src="img/illustration-presentations.png" width="300px" alt="">
-            <h3 class="services__caption">Презентации</h3>
-            <p class="services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
-            <button class="button" type="button">Заказать</button>
-          </li>
-          <li class="services__item">
-            <img class="services__image" src="img/illustration-presentations.png" width="300px" alt="">
-            <h3 class="services__caption">Презентации</h3>
-            <p class="services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
-            <button class="button" type="button">Заказать</button>
-          </li>
-          <li class="services__item">
-            <img class="services__image" src="img/illustration-presentations.png" width="300px" alt="">
-            <h3 class="services__caption">Презентации</h3>
-            <p class="services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
-            <button class="button" type="button">Заказать</button>
-          </li>
         </ul>
       </section>
       <hr>
@@ -122,29 +110,29 @@
         <div class="about__column-left">
           <h3 class="about__lead">Мы — маленькая, но гордая дизайн-студия из Краснодара.</h3>
           <p class="about__text">Исповедаем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-          <h4 class="about__caption">Выполняем заказы на разработку:</h4>
-          <ul class="about__work-list">
-            <li class="about__work-item">Веб-сайтов любой сложности</li>
-            <li class="about__work-item">Мобильных приложений для iOS и Android</li>
-            <li class="about__work-item">Слайдшоу и видео для корпоративных презентаций</li>
+          <h4 class="about__caption caption">Выполняем заказы на разработку:</h4>
+          <ul class="about__work-list no-bullet">
+            <li class="about__work-item item-bullet">Веб-сайтов любой сложности</li>
+            <li class="about__work-item item-bullet">Мобильных приложений для iOS и Android</li>
+            <li class="about__work-item item-bullet">Слайдшоу и видео для корпоративных презентаций</li>
           </ul>
         </div>
         <div class="about__column-right">
-          <img class="about__logo" src="" alt="">
-          <h4 class="about__caption">С 2004 года любим точность во всем:</h4>
-          <ul class="about__rates-list">
+          <img class="about__logo" src="img/nerds-illustration.png" width="360px" alt="">
+          <h4 class="about__caption caption">С 2004 года любим точность во всем:</h4>
+          <ul class="about__rates-list no-bullet">
             <li class="about__rates-item">
-              <p class="about__text">
+              <p class="about__text about__rates-text">
                 <strong class="about__rate">146<span class="perсent">%</span></strong> Уровень самоотдачи
               </p>
             </li>
             <li class="about__rates-item">
-              <p class="about__text">
+              <p class="about__text about__rates-text">
                 <strong class="about__rate">100<span class="perсent">%</span></strong> Соблюдение сроков
               </p>
             </li>
             <li class="about__rates-item">
-              <p class="about__text">
+              <p class="about__text about__rates-text">
                 <strong class="about__rate">50<span class="perсent">%</span></strong> Минимальная предоплата
               </p>
             </li>
@@ -154,25 +142,25 @@
       <hr>
       <section class="clients">
         <h2 class="visually-hidden">Наши клиенты</h2>
-        <ul class="clients__list">
+        <ul class="clients__list no-bullet">
           <li class="clients__item">
             <a class="clients__link">
-              <img class="clients__banner" src="" alt="HTML Academy интерактивные онлайн-курсы">
+              <img class="clients__banner" src="img/logo-1.png" width="199px" alt="HTML Academy интерактивные онлайн-курсы">
             </a>
           </li>
           <li class="clients__item">
-            <a class="clients__link>">
-              <img class="clients__banner" src="" alt="Барбершоп Бородинский">
+            <a class="clients__link">
+              <img class="clients__banner" src="img/logo-2.png" width="209px" alt="Барбершоп Бородинский">
             </a>
           </li>
           <li class="clients__item">
-            <a class="clients__link>">
-              <img class="clients__banner" src="" alt="Pink">
+            <a class="clients__link">
+              <img class="clients__banner" src="img/logo-3.png" width="185px" alt="Pink">
             </a>
           </li>
           <li class="clients__item">
-            <a class="clients__link>">
-              <img class="clients__banner" src="" alt="Mishka">
+            <a class="clients__link">
+              <img class="clients__banner" src="img/logo-4.png" width="173px;" alt="Mishka">
             </a>
           </li>
         </ul>
@@ -185,26 +173,26 @@
     <div class="main-wrapper">
       <h2 class="visually-hidden">Контактная информация</h2>
       <div class="contacts">
-        <h4 class="contacts__caption">Nёrds Design Studio</h4>
+        <h4 class="contacts__caption caption">Nёrds Design Studio</h4>
         <p class="contacts__text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <p class="contacts__text">тел. +7 (812) 275-75-75</p>
         <a class="button contacts__button" href="feedback.html">Напишите нам</a>
       </div>
       <div class="social-links">
-        <ul class="social-links__list">
+        <ul class="social-links__list no-bullet">
           <li class="social-links__item">
-            <a class="social-links__link">
-              <img class="social-links__icon" src="" alt="Наша группа Вконтакте">
+            <a class="social-links__link" href="https://vk.com">
+              <img class="social-links__icon" src="img/vk-icon.svg" width="26px" alt="Наша группа Вконтакте">
             </a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__link">
-              <img class="social-links__icon" src="" alt="Наш профиль в Facebook">
+            <a class="social-links__link" href="https://facebook.com">
+              <img class="social-links__icon" src="img/fb-icon.svg" width="12px" alt="Наш профиль в Facebook">
             </a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__link">
-              <img class="social-links__icon" src="" alt="Наш профиль в Instagram">
+            <a class="social-links__link" href="https://instagram.com">
+              <img class="social-links__icon" src="img/insta-icon.svg" width="21px" alt="Наш профиль в Instagram">
             </a>
           </li>
         </ul>
