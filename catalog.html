@@ -2,21 +2,19 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
   <title>Нёрдс | Магазин</title>
 </head>
 <body>
   <header class="main-header">
     <nav class="navigation main-wrapper">
-      <ul class="main-menu">
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="index.html">
+          <a class="main-menu__link--logo" href="index.html">
             <span class="visually-hidden">Перейти на главную страницу</span>
-            <img class="main-logo" src="" alt="Логотип дизайн-студии «Нёрдс»">
+            <img class="main-logo" src="img/nerds-logo.svg" width="160px" alt="Логотип дизайн-студии «Нёрдс»">
           </a>
-        </li>
-      </ul>
-      <ul class="main-menu__list">
+      <ul class="main-menu__list no-bullet">
         <li class="main-menu__item">
           <a class="main-menu__link" href="">Студия</a>
         </li>
@@ -24,48 +22,48 @@
           <a class="main-menu__link" href="">Клиенты</a>
         </li>
         <li class="main-menu__item">
-          <a class="main-menu__link">Магазин</a>
+          <a class="main-menu__link main-menu__link--current">Магазин</a>
         </li>
         <li class="main-menu__item">
           <a class="main-menu__link" href="">Контакты</a>
         </li>
       </ul>
-      <ul>
+      <ul class="basket no-bullet">
         <li class="main-menu__item">
           <a class="main-menu__link">Корзина</a>
         </li>
-      </ul>  
+      </ul>
     </nav>
   </header>
   <main class="main-content">
-    <div class="main-caption">
-      <h1 class="main-header">Магазин готовых шаблонов</h1>
+    <div class="main-caption-wrapper">
+      <h1 class="main-caption">Магазин готовых шаблонов</h1>
     </div>
     <div class="main-wrapper">
       <div class="columns-container">
         <form class="catalog-form" method="get">
           <fieldset class="catalog-form__fieldset">
-            <legend class="catalog-form__legend">Стоимость:</legend>
+            <legend class="catalog-form__legend catalog__caption">Стоимость:</legend>
             <div class="catalog-form__slider"></div>
           </fieldset>
           <fieldset class="catalog-form__fieldset">
-            <legend class="catalog-form__legend">Сетка:</legend>
-            <ul class="catalog-form__list">
-              <li class="product-filter__item">
+            <legend class="catalog-form__legend catalog__caption">Сетка:</legend>
+            <ul class="catalog-form__list no-bullet">
+              <li class="catalog-form__item">
                 <label class="radiobutton">
                   <input class="visually-hidden radiobutton__hidden" type="radio" name="grid" value="adaptive">
                   <span class="radiobutton__indicator"></span>
                   <span class="radiobutton__text">Адаптивная</span>
                 </label>
               </li>
-              <li class="product-filter__item">
+              <li class="catalog-form__item">
                 <label class="radiobutton">
                   <input class="visually-hidden radiobutton__hidden" type="radio" name="grid" value="fixed">
                   <span class="radiobutton__indicator"></span>
                   <span class="radiobutton__text">Фиксированная</span>
                 </label>
               </li>
-              <li class="product-filter__item">
+              <li class="catalog-form__item">
                 <label class="radiobutton">
                   <input class="visually-hidden radiobutton__hidden" type="radio" name="grid" value="rubber">
                   <span class="radiobutton__indicator"></span>
@@ -75,8 +73,8 @@
             </ul>
           </fieldset>
           <fieldset class="catalog-form__fieldset">
-            <legend class="catalog-form__legend">Особенности:</legend>
-            <ul class="catalog-form__list">
+            <legend class="catalog-form__legend catalog__caption">Особенности:</legend>
+            <ul class="catalog-form__list no-bullet">
               <li class="catalog-form__item">
                 <label class="checkbox">
                   <input class="visually-hidden checkbox__hidden" type="checkbox" name="slider">
@@ -114,31 +112,38 @@
               </li>
             </ul>
           </fieldset>
-          <input class="button catalog-form__button" type="submit" value="Показать">
+          <input class="button form-button" type="submit" value="Показать">
         </form>
         <section class="catalog">
           <div class="catalog__group-by">
             <p class="catalog__caption">Сортировать:</p>
-            <div class="catalog__controls">
-              <button class="button catalog__button">По цене</button>
-              <button class="button catalog__button">По типу</button>
-              <button class="button catalog__button">По названию</button>
-              <button class="button catalog__button"><img src="" alt="По убыванию"></button>
-              <button class="button catalog__button"><img src="" alt="По возрастанию"></button>
-            </div>
-          </div>
-          <div class="catalog__wrapper">
-            <ul class="catalog__list">
-              <li class="catalog__item"></li>
-              <li class="catalog__item"></li>
-              <li class="catalog__item"></li>
-              <li class="catalog__item"></li>
-              <li class="catalog__item"></li>
-              <li class="catalog__item"></li>
+            <ul class="catalog-controls__list no-bullet">
+              <li class="catalog-controls__item"><button class="catalog__control catalog__control--group-by">По цене</button></li>
+              <li class="catalog-controls__item"><button class="catalog__control catalog__control--group-by">По типу</button></li>
+              <li class="catalog-controls__item"><button class="catalog__control catalog__control--group-by">По названию</button></li>
+              <li class="catalog-controls__item"><button class="catalog__control catalog__control--order"><img src="img/icon-down-dir.svg" width="11px" alt="По убыванию"></button></li>
+              <li class="catalog-controls__item"><button class="catalog__control catalog__control--order"><img src="img/icon-up-dir.svg" width="11px" alt="По возрастанию"></button></li>
             </ul>
           </div>
+          <ul class="catalog__list no-bullet">
+            <li class="catalog__item">
+              <a class="catalog__buy-link" href="">
+                <img class="catalog__image" src="img/img-sedona.jpg" width="360px" alt="">
+              </a>
+              <div class="catalog-card">
+                <p class="catalog-card__caption catalog__caption">Sedona</p>
+                <p class="catalog-card__text">Информационный сайт<br>для туристов</p>
+                <label class="button catalog-card__button" type="button">9900 руб.</label>
+              </div>
+            </li>
+            <li class="catalog__item"></li>
+            <li class="catalog__item"></li>
+            <li class="catalog__item"></li>
+            <li class="catalog__item"></li>
+            <li class="catalog__item"></li>
+          </ul>
           <div class="pagination">
-            <ul class="pagination__list">
+            <ul class="pagination__list no-bullet">
               <li class="pagination__item">
                 <button class="button form-button pagination-button">1</button>
               </li>

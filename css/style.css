@@ -411,6 +411,7 @@ img{
   font-weight: 500;
   text-transform: uppercase;
   border: none;
+  border-radius: 3px;
   cursor: pointer;
   background-color: #fb5559;
 }
@@ -493,3 +494,173 @@ hr{
 .main-menu__link--logo:active{
   opacity: 0.3;
 }
+
+.main-caption-wrapper{
+  height: 241px;
+  background-color: #eeeeee;
+  padding-top:80px;
+}
+
+.main-caption {
+  font-size: 55px;
+  color: #000000;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+
+.columns-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.catalog-form{
+  width: 400px;
+}
+
+.catalog-form__fieldset{
+  border: none;
+  margin:0;
+  padding:0;
+}
+
+.catalog__caption{
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.catalog-form__item{
+  margin-bottom: 18px;
+}
+
+.checkbox{
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.checkbox__text{
+  display: inline-block;
+  margin-left: 10px;
+  color: #283136;
+}
+
+.checkbox__indicator{
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.checkbox__hidden:checked + .checkbox__indicator{
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.checkbox__indicator:hover,
+.checkbox:hover > .checkbox__indicator,
+.checkbox__hidden:focus + .checkbox__indicator{
+  opacity: 1;
+}
+
+
+.radiobutton{
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.radiobutton__text{
+  display: inline-block;
+  margin-left: 10px;
+  color: #283136;
+}
+
+.radiobutton__indicator{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.radiobutton__hidden:checked + .radiobutton__indicator{
+  background-image: url("../img/radio-on.svg");
+}
+
+.radiobutton__indicator:hover,
+.radiobutton:hover > .radiobutton__indicator,
+.radiobutton__hidden:focus + .radiobutton__indicator{
+  opacity: 1;
+}
+
+.catalog__list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog__item{
+  width: 360px;
+
+  position: relative;
+}
+
+.catalog__item:hover{
+  filter: drop-shadow(0px 6px 8px rgba(0,1,1,0.25));
+  outline: 1px solid rgba(77,77,77,0.1);
+}
+
+.catalog__item:hover > .catalog__buy-link::before,
+.catalog__item:hover > .catalog-card{
+  opacity:1;
+}
+
+.catalog__buy-link:focus::before,
+.catalog__buy-link:focus + .catalog-card{
+  opacity:1;
+}
+
+.catalog__buy-link::before{
+  display:block;
+  content: "";
+  width: 100%;
+  height: 40px;
+  background-image: url("../img/browser.svg");
+  background-repeat: no-repeat;
+  opacity: 0.12;
+}
+
+.catalog__image{
+}
+
+.catalog-card{
+  position: absolute;
+  bottom:0;
+  left:0;
+  background-color: #eeeeee;
+  width: 100%;
+  height: 231px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 60px;
+  padding-right: 60px;
+  opacity:0;
+}
+
+.catalog-card__text{
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+  text-align: center;
+}
+
+
