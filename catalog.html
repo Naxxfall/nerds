@@ -117,13 +117,17 @@
         <section class="catalog">
           <div class="catalog__group-by">
             <p class="catalog__caption">Сортировать:</p>
-            <ul class="catalog-controls__list no-bullet">
-              <li class="catalog-controls__item"><button class="catalog__control catalog__control--group-by">По цене</button></li>
-              <li class="catalog-controls__item"><button class="catalog__control catalog__control--group-by">По типу</button></li>
-              <li class="catalog-controls__item"><button class="catalog__control catalog__control--group-by">По названию</button></li>
-              <li class="catalog-controls__item"><button class="catalog__control catalog__control--order"><img src="img/icon-down-dir.svg" width="11px" alt="По убыванию"></button></li>
-              <li class="catalog-controls__item"><button class="catalog__control catalog__control--order"><img src="img/icon-up-dir.svg" width="11px" alt="По возрастанию"></button></li>
-            </ul>
+            <div class="catalog-controls__wrapper">
+              <ul class="catalog-controls__list catalog-controls__list--group-by no-bullet">
+                <li class="catalog-controls__item catalog-controls__item--group-by"><button class="catalog__control catalog__control--current catalog__control--group-by">По цене</button></li>
+                <li class="catalog-controls__item catalog-controls__item--group-by"><button class="catalog__control catalog__control--group-by">По типу</button></li>
+                <li class="catalog-controls__item catalog-controls__item--group-by"><button class="catalog__control catalog__control--group-by">По названию</button></li>
+              </ul>
+              <ul class="catalog-controls__list catalog-controls__list--order no-bullet">
+                <li class="catalog-controls__item catalog-controls__item--order"><button class="catalog__control catalog__control--current catalog__control--order"><img src="img/icon-down-dir.svg" width="11px" alt="По убыванию"></button></li>
+                <li class="catalog-controls__item catalog-controls__item--order"><button class="catalog__control catalog__control--order"><img src="img/icon-up-dir.svg" width="11px" alt="По возрастанию"></button></li>
+              </ul>
+            </div>
           </div>
           <ul class="catalog__list no-bullet">
             <li class="catalog__item">
@@ -136,16 +140,61 @@
                 <label class="button catalog-card__button" type="button">9900 руб.</label>
               </div>
             </li>
-            <li class="catalog__item"></li>
-            <li class="catalog__item"></li>
-            <li class="catalog__item"></li>
-            <li class="catalog__item"></li>
-            <li class="catalog__item"></li>
+            <li class="catalog__item">
+              <a class="catalog__buy-link" href="">
+                <img class="catalog__image" src="img/img-pink.jpg" width="360px" alt="">
+              </a>
+              <div class="catalog-card">
+                <p class="catalog-card__caption catalog__caption">Pink App</p>
+                <p class="catalog-card__text">Продуктовый лендинг<br>приложения для iOS и Android</p>
+                <label class="button catalog-card__button" type="button">9900 руб.</label>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__buy-link" href="">
+                <img class="catalog__image" src="img/img-barbershop.jpg" width="360px" alt="">
+              </a>
+              <div class="catalog-card">
+                <p class="catalog-card__caption catalog__caption">Barbershop</p>
+                <p class="catalog-card__text">Сайт салона красоты.<br>Для мужчин, да.</p>
+                <label class="button catalog-card__button" type="button">9900 руб.</label>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__buy-link" href="">
+                <img class="catalog__image" src="img/img-mishka.jpg" width="360px" alt="">
+              </a>
+              <div class="catalog-card">
+                <p class="catalog-card__caption catalog__caption">Mishka</p>
+                <p class="catalog-card__text">Интернет-магазин<br>вязаных игрушек</p>
+                <label class="button catalog-card__button" type="button">9900 руб.</label>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__buy-link" href="">
+                <img class="catalog__image" src="img/img-aplus.jpg" width="360px" alt="">
+              </a>
+              <div class="catalog-card">
+                <p class="catalog-card__caption catalog__caption">A Plus</p>
+                <p class="catalog-card__text">Лендинг курсов<br>повышения квалификации</p>
+                <label class="button catalog-card__button" type="button">9900 руб.</label>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__buy-link" href="">
+                <img class="catalog__image" src="img/img-kvast.jpg" width="360px" alt="">
+              </a>
+              <div class="catalog-card">
+                <p class="catalog-card__caption catalog__caption">Кваст</p>
+                <p class="catalog-card__text">Промо-сайт производителя<br>крафтового кваса</p>
+                <label class="button catalog-card__button" type="button">9900 руб.</label>
+              </div>
+            </li>
           </ul>
           <div class="pagination">
             <ul class="pagination__list no-bullet">
               <li class="pagination__item">
-                <button class="button form-button pagination-button">1</button>
+                <button class="button form-button pagination-button pagination-button--current">1</button>
               </li>
               <li class="pagination__item">
                 <button class="button form-button pagination-button">2</button>
@@ -163,30 +212,32 @@
     </div>
   </main>
   <footer class="main-footer">
-    <div class="map"></div>
+    <div class="map">
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A93148eb541c0cf088c847e32d00c5382eb821a0918bf2b37befaef58043a42cd&amp;width=100%25&amp;height=416&amp;lang=ru_RU&amp;scroll=false"></script>
+    </div>
     <div class="main-wrapper">
       <h2 class="visually-hidden">Контактная информация</h2>
       <div class="contacts">
-        <h4 class="contacts__caption">Nёrds Design Studio</h4>
+        <h4 class="contacts__caption caption">Nёrds Design Studio</h4>
         <p class="contacts__text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <p class="contacts__text">тел. +7 (812) 275-75-75</p>
         <a class="button contacts__button" href="feedback.html">Напишите нам</a>
       </div>
       <div class="social-links">
-        <ul class="social-links__list">
+        <ul class="social-links__list no-bullet">
           <li class="social-links__item">
-            <a class="social-links__link">
-              <img class="social-links__icon" src="" alt="Наша группа Вконтакте">
+            <a class="social-links__link" href="https://vk.com">
+              <img class="social-links__icon" src="img/vk-icon.svg" width="26px" alt="Наша группа Вконтакте">
             </a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__link">
-              <img class="social-links__icon" src="" alt="Наш профиль в Facebook">
+            <a class="social-links__link" href="https://facebook.com">
+              <img class="social-links__icon" src="img/fb-icon.svg" width="12px" alt="Наш профиль в Facebook">
             </a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__link">
-              <img class="social-links__icon" src="" alt="Наш профиль в Instagram">
+            <a class="social-links__link" href="https://instagram.com">
+              <img class="social-links__icon" src="img/insta-icon.svg" width="21px" alt="Наш профиль в Instagram">
             </a>
           </li>
         </ul>

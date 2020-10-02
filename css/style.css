@@ -371,23 +371,30 @@ img{
 .social-links__item{
   width: 78px;
   height: 78px;
-  border-radius: 39px;
-  background-color: #e1e1e1;
   margin-right: 12px;
-}
-
-.social-links__item:hover,
-.social-links__item:focus,
-.social-links__item:active{
-  background-color: #e74246;
 }
 
 .social-links__link{
   width: 100%;
   height: 100%;
   display:flex;
+  background-color: #e1e1e1;
+  border-radius: 39px;
   justify-content: center;
   align-items: center;
+}
+
+.social-links__link:hover,
+.social-links__link:focus{
+  background-color: #e74246;
+}
+
+.social-links__link:active{
+  background-color: #d7373b;
+}
+
+.social-links__link:active > .social-links__icon{
+  opacity: 0.3;
 }
 
 .social-links__lead{
@@ -400,6 +407,7 @@ img{
 
 .button{
   width: auto;
+  height: 50px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -450,6 +458,41 @@ img{
 .button--yellow:active{
   background-color: #e5a722;
 }
+
+.form-button{
+  background-color: #ededed;
+  color: #000000;
+  padding-left: 88px;
+  padding-right: 88px;
+}
+
+.form-button:hover,
+.form-button:focus{
+  background-color: #dfdfdf;
+}
+
+.form-button:active{
+  background-color: #d5d5d5;
+  color: rgba(0, 0, 0, 0.3);
+  border-top: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+.pagination-button{
+  padding: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.pagination-button--current,
+.pagination-button--current:hover,
+.pagination-button--current:focus,
+.pagination-button--current:active{
+  color: #000000;
+  border: 3px solid #dbdbdb;
+  background-color: #ffffff;
+  cursor: default;
+}
+
 
 hr{
   padding:0;
@@ -512,11 +555,10 @@ hr{
 .columns-container{
   display: flex;
   flex-direction: row;
-  justify-content: left;
 }
 
 .catalog-form{
-  width: 400px;
+  min-width: 400px;
 }
 
 .catalog-form__fieldset{
@@ -605,12 +647,13 @@ hr{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .catalog__item{
   width: 360px;
-
   position: relative;
+  margin-bottom: 30px;
 }
 
 .catalog__item:hover{
@@ -638,13 +681,10 @@ hr{
   opacity: 0.12;
 }
 
-.catalog__image{
-}
-
 .catalog-card{
   position: absolute;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
   background-color: #eeeeee;
   width: 100%;
   height: 231px;
@@ -656,11 +696,113 @@ hr{
   opacity:0;
 }
 
+.catalog-card__caption{
+  display: inline-block;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
 .catalog-card__text{
   font-size: 16px;
   line-height: 18px;
   color: #666666;
   text-align: center;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
+.catalog-card__button{
+  width: 200px;
+}
 
+.catalog__buy-link{
+  display: block;
+  height: 616px;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.pagination__list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.catalog__group-by{
+  display: flex;
+  margin: 20px 0;
+}
+
+.catalog-controls__wrapper{
+  margin-left: auto;
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog-controls__list{
+  display: flex;
+  align-items: center;
+}
+
+.catalog-controls__list--group-by{
+  margin-right:auto;
+  justify-content: flex-start;
+  margin-left:-14px;
+}
+
+.catalog-controls__list--order{
+  margin-left: auto;
+  justify-content: flex-end;
+  margin-right: -5px;
+}
+
+.catalog__control{
+  display: block;
+  background-color: inherit;
+  border: none;
+  font-weight: inherit;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  opacity: 0.3;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.catalog__control--group-by{
+  padding: 10px 14px;
+}
+
+.catalog__control--order{
+  padding: 10px 5px;
+}
+
+.catalog__control:hover,
+.catalog__control:focus{
+  opacity: 0.6;
+}
+
+.catalog__control:active{
+  opacity: 1;
+}
+
+.catalog__control--current,
+.catalog__control--current:hover,
+.catalog__control--current:focus,
+.catalog__control--current:active{
+  opacity: 1;
+  cursor: default;
+}
+
+.pagination__item{
+  margin: 0 10px 10px 0;
+}
