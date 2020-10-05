@@ -342,9 +342,12 @@ img{
 }
 
 .clients__link:hover,
-.clients__link:focus,
-.clients__link:active{
+.clients__link:focus{
   opacity: 1;
+}
+
+.clients__link:active {
+  opacity: 0.1;
 }
 
 .contacts{
@@ -558,6 +561,7 @@ hr{
 }
 
 .catalog-form{
+  margin-top: 20px;
   min-width: 400px;
 }
 
@@ -573,6 +577,7 @@ hr{
   color: #000000;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 30px 0 20px 0;
 }
 
 .catalog-form__item{
@@ -805,4 +810,55 @@ hr{
 
 .pagination__item{
   margin: 0 10px 10px 0;
+}
+
+.form-range{
+  width: 262px;
+  margin-bottom: 20px;
+}
+
+.range-scale__wrapper{
+  position: relative;
+  height: 82px;
+  background-color: #ededed;
+  padding-top: 40px;
+  padding-left: 21px;
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-bottom: 14px;
+}
+
+.range__scale{
+  display: block;
+  width: 220px;
+  height: 1px;
+}
+
+.range__scale--max{
+  margin-top: -3px;
+}
+
+.range-values__wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.range-value {
+  display: inline-block;
+  width: 80px;
+  height: 38px;
+  background-color: #ededed;
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.range-value__label{
+  color: #283136;
+  text-transform: uppercase;
+}
+
+.form-button--filter{
+  margin-top: 20px;
 }

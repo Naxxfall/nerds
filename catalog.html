@@ -42,9 +42,18 @@
     <div class="main-wrapper">
       <div class="columns-container">
         <form class="catalog-form" method="get">
-          <fieldset class="catalog-form__fieldset">
+          <fieldset class="catalog-form__fieldset no-js-hide">
             <legend class="catalog-form__legend catalog__caption">Стоимость:</legend>
-            <div class="catalog-form__slider"></div>
+            <div class="form-range range">
+              <div class="range-scale__wrapper">
+                <input class="range__scale range__scale--min" type="range" min="0" step="1000" max="20000" value="0" oninput="minRangeMove()">
+                <input class="range__scale range__scale--max" type="range" min="0" step="1000" max="20000" value="20000" oninput="maxRangeMove()">
+              </div>
+              <div class="range-values__wrapper">
+                <label class="range-value__label">от <input class="range-value range-value__min-price" type="text" name="min-price" readonly value="0"></label>
+                <label class="range-value__label">до <input class="range-value range-value__max-price" type="text" name="max-price" readonly value="20000"></label>
+              </div>
+            </div>
           </fieldset>
           <fieldset class="catalog-form__fieldset">
             <legend class="catalog-form__legend catalog__caption">Сетка:</legend>
@@ -112,7 +121,7 @@
               </li>
             </ul>
           </fieldset>
-          <input class="button form-button" type="submit" value="Показать">
+          <input class="button form-button form-button--filter" type="submit" value="Показать">
         </form>
         <section class="catalog">
           <div class="catalog__group-by">
