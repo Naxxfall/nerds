@@ -6,7 +6,11 @@ const rangeMin = document.querySelector(".range__scale--min");
 const rangeMax = document.querySelector(".range__scale--max");
 const priceMin = document.querySelector(".range-value__min-price");
 const priceMax = document.querySelector(".range-value__max-price");
-const numbers = /^[0-9]+$/;
+const feedbackModal = document.querySelector(".feedback-page");
+const openModalButton = document.querySelector(".contacts__button");
+const closeModalButton = feedbackModal.querySelector(".close-button");
+const blocker = document.querySelector(".blocker");
+const feedbackName = feedbackModal.querySelector(".feedback__name");
 
 showIfJS.forEach((element) =>{
   element.classList.remove("no-js-hide");
@@ -60,4 +64,33 @@ function maxRangeMove(){
   }
   priceMax.value=rangeMax.value;
 }
+
+function showModal(modal, blocker){
+  modal.classList.add("modal-show");
+  blocker.classList.add("blocker-show");
+}
+
+function closeModal(modal, blocker){
+  modal.classList.remove("modal-show");
+  blocker.classList.remove("blocker-show");
+}
+
+openModalButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  showModal(feedbackModal, blocker);
+  feedbackName.focus();
+});
+
+closeModalButton.addEventListener("click", function(evt){
+  evt.preventDefault();
+  closeModal(feedbackModal, blocker);
+});
+
+window.addEventListener("keydown", function(evt) {
+  if (evt.key === "Escape"){
+    if (feedbackModal.classList.contains("modal-show")){
+      closeModalButton.dispatchEvent(new MouseEvent("click"));
+    }
+  }
+});
 

@@ -30,7 +30,7 @@
       </ul>
       <ul class="basket no-bullet">
         <li class="main-menu__item">
-          <a class="main-menu__link">Корзина</a>
+          <a class="main-menu__link main-menu__link--basket" href="">Корзина</a>
         </li>
       </ul>
     </nav>
@@ -254,5 +254,19 @@
       </div>
     </div>
   </footer>
+  <section class="modal feedback-page">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <h2 class=feedback__lead>Напишите нам</h2>
+    <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
+      <label class="feedback__label">Ваше имя: <input class="form-text-input feedback__name" type="text" name="name" placeholder="Имя Фамилия" required pattern=".{3,}"></label>
+      <label class="feedback__label">Ваш e-mail: <input class="form-text-input feedback__email" type="email" name="email" placeholder="email@example.com" required></label>
+      <label class="feedback__label">Текст письма: <textarea class="form-text-input feedback__message" name="message" placeholder="В свободной форме" required></textarea></label>
+      <input class="button feedback__button" type="submit" value="Отправить">
+    </form>
+    <button class="close-button" type="button">
+      <span class="visually-hidden">Закрыть форму обратной связи</span>
+    </button>
+  </section>
+  <div class="blocker"></div>
 </body>
 </html>
